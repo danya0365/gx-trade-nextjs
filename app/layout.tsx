@@ -1,3 +1,4 @@
+import MainLayout from "@/src/presentation/components/layouts/MainLayout";
 import { ThemeProvider } from "@/src/presentation/components/providers/ThemeProvider";
 import type { Metadata } from "next";
 import "../public/styles/index.css";
@@ -85,7 +86,7 @@ export default function RootLayout({
     <html lang="th" suppressHydrationWarning>
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <MainLayout>{children}</MainLayout>
         </ThemeProvider>
       </body>
     </html>
