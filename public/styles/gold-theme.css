@@ -1,0 +1,199 @@
+/* 🏆 Gold Theme - GX Trade */
+@layer base {
+  :root {
+    /* Primary Gold Colors */
+    --color-gold-50: #fffbeb;
+    --color-gold-100: #fef3c7;
+    --color-gold-200: #fde68a;
+    --color-gold-300: #fcd34d;
+    --color-gold-400: #fbbf24;
+    --color-gold-500: #f59e0b;
+    --color-gold-600: #d97706;
+    --color-gold-700: #b45309;
+    --color-gold-800: #92400e;
+    --color-gold-900: #78350f;
+
+    /* Amber Colors */
+    --color-amber-50: #fffbeb;
+    --color-amber-100: #fef3c7;
+    --color-amber-200: #fde68a;
+    --color-amber-300: #fcd34d;
+    --color-amber-400: #fbbf24;
+    --color-amber-500: #f59e0b;
+    --color-amber-600: #d97706;
+    --color-amber-700: #b45309;
+    --color-amber-800: #92400e;
+    --color-amber-900: #78350f;
+
+    /* Orange Colors (for price up) */
+    --color-orange-50: #fff7ed;
+    --color-orange-100: #ffedd5;
+    --color-orange-200: #fed7aa;
+    --color-orange-300: #fdba74;
+    --color-orange-400: #fb923c;
+    --color-orange-500: #f97316;
+    --color-orange-600: #ea580c;
+    --color-orange-700: #c2410c;
+    --color-orange-800: #9a3412;
+    --color-orange-900: #7c2d12;
+
+    /* Primary Brand Colors */
+    --color-primary: var(--color-gold-500);
+    --color-primary-light: var(--color-gold-400);
+    --color-primary-dark: var(--color-gold-600);
+    --color-primary-hover: var(--color-gold-600);
+
+    /* Price Change Colors */
+    --color-price-up: #10b981; /* Green for price increase */
+    --color-price-down: #ef4444; /* Red for price decrease */
+    --color-price-neutral: #6b7280; /* Gray for no change */
+
+    /* Gradient Backgrounds */
+    --gradient-gold-primary: linear-gradient(
+      135deg,
+      var(--color-gold-400) 0%,
+      var(--color-orange-500) 100%
+    );
+    --gradient-gold-light: linear-gradient(
+      135deg,
+      var(--color-gold-100) 0%,
+      var(--color-orange-100) 100%
+    );
+    --gradient-gold-dark: linear-gradient(
+      135deg,
+      var(--color-gold-700) 0%,
+      var(--color-orange-700) 100%
+    );
+
+    /* Glassmorphism Effects */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --glass-blur: blur(8px);
+  }
+
+  .dark {
+    /* Override colors for dark mode */
+    --color-primary: var(--color-gold-400);
+    --color-primary-light: var(--color-gold-300);
+    --color-primary-dark: var(--color-gold-500);
+    --color-primary-hover: var(--color-gold-500);
+
+    /* Glass effect for dark mode */
+    --glass-bg: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+
+/* 🎨 Utility Classes */
+@layer utilities {
+  /* Gold Gradients */
+  .bg-gradient-gold {
+    background: var(--gradient-gold-primary);
+  }
+
+  .bg-gradient-gold-light {
+    background: var(--gradient-gold-light);
+  }
+
+  .bg-gradient-gold-dark {
+    background: var(--gradient-gold-dark);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* Price Change Indicators */
+  .price-up {
+    color: var(--color-price-up);
+  }
+
+  .price-down {
+    color: var(--color-price-down);
+  }
+
+  .price-neutral {
+    color: var(--color-price-neutral);
+  }
+
+  /* Gold Text */
+  .text-gold {
+    color: var(--color-gold-500);
+  }
+
+  .text-gold-light {
+    color: var(--color-gold-400);
+  }
+
+  .text-gold-dark {
+    color: var(--color-gold-600);
+  }
+
+  /* Gold Backgrounds */
+  .bg-gold {
+    background-color: var(--color-gold-500);
+  }
+
+  .bg-gold-light {
+    background-color: var(--color-gold-100);
+  }
+
+  .bg-gold-dark {
+    background-color: var(--color-gold-800);
+  }
+
+  /* Shimmer Animation for Gold Elements */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    animation: shimmer 3s infinite;
+    background: linear-gradient(
+      to right,
+      var(--color-gold-400) 0%,
+      var(--color-gold-300) 20%,
+      var(--color-gold-400) 40%,
+      var(--color-gold-400) 100%
+    );
+    background-size: 1000px 100%;
+  }
+
+  /* Pulse Animation for Price Updates */
+  @keyframes pulse-gold {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .pulse-gold {
+    animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Glow Effect */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5),
+      0 0 40px rgba(251, 191, 36, 0.3);
+  }
+
+  .dark .glow-gold {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3),
+      0 0 40px rgba(251, 191, 36, 0.2);
+  }
+}
