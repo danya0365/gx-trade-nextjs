@@ -11,8 +11,9 @@
 ระบบวิเคราะห์ราคาทองแบบครบวงจร พร้อมฟีเจอร์ชุมชน Gamification และ Social Trading สำหรับนักลงทุนทองคำ
 
 **เทคโนโลยีหลัก:**
+
 - **Frontend Framework:** Next.js 15 (App Router)
-- **UI/Styling:** Tailwind CSS + shadcn/ui
+- **UI/Styling:** Tailwind CSS
 - **State Management:** Zustand + localforage (Client-side)
 - **Backend/Database:** Supabase (PostgreSQL)
 - **Data Approach:** Mock Data + Master Data (Client-side Dynamic)
@@ -23,32 +24,25 @@
 ## ✅ Project Setup & Configuration
 
 ### Phase 1: Initial Setup (ต้องทำก่อน)
+
 - [x] ✅ Clone project structure from timeluxe-nextjs
-- [ ] 🔄 Update `package.json` with project name and dependencies
-- [ ] 🔄 Update `README.md` with project information
-- [ ] 🔄 Update metadata in `app/layout.tsx`
-- [ ] 🔄 Create Tailwind CN utility helper
-- [ ] 🔄 Copy and configure `.env` files
-- [ ] 🔄 Initialize Supabase project
-- [ ] 🔄 Setup Supabase migrations for database schema
-- [ ] 🔄 Setup Supabase seeds for master data
-- [ ] 🔄 Copy public assets from timeluxe-nextjs
-- [ ] 🔄 Generate logo and create favicon set
 
 ### Phase 2: Core Architecture Setup
+
 - [ ] 📦 Create project folder structure following Clean Architecture
+
   - [ ] `src/domain/entities` - Domain entities
   - [ ] `src/domain/types` - TypeScript types & interfaces
   - [ ] `src/application/stores` - Zustand stores
   - [ ] `src/presentation/components` - React components
   - [ ] `src/presentation/presenters` - Presenter layer
   - [ ] `src/infrastructure/config` - Configuration files
-  - [ ] `public/data` - Mock data JSON files
+  - [ ] `public/data` - Master & Mock data JSON files with TypeScript types
 
 - [ ] 🎨 Setup Design System
+
   - [ ] Create color palette for gold theme (golden, amber, yellow variants)
   - [ ] Setup typography system
-  - [ ] Create component library with shadcn/ui
   - [ ] Setup CSS custom properties for theming
   - [ ] Create animation utilities
   - [ ] Setup responsive breakpoints
@@ -65,7 +59,9 @@
 ## 🎯 Core Features Implementation
 
 ### 1️⃣ Authentication & User Profile System
+
 - [ ] **Authentication Setup**
+
   - [ ] Create Zustand auth store (`src/application/stores/authStore.ts`)
   - [ ] Implement login/register UI
   - [ ] Setup Supabase Auth integration
@@ -80,8 +76,11 @@
   - [ ] Add avatar upload feature
 
 ### 2️⃣ Gold Price Display System
+
 **หน้าแรก:** `/` หรือ `/prices`
+
 - [ ] **Real-time Gold Prices**
+
   - [ ] Create gold price entity & types
   - [ ] Create Zustand gold price store
   - [ ] Create mock gold price data (current + historical)
@@ -91,6 +90,7 @@
   - [ ] Create price alert notifications
 
 - [ ] **Historical Data & Charts**
+
   - [ ] Create historical price mock data
   - [ ] Integrate charting library (recharts/Chart.js)
   - [ ] Design interactive price chart
@@ -105,8 +105,11 @@
   - [ ] Add market sentiment indicators
 
 ### 3️⃣ Community & Social Features
+
 **หน้าชุมชน:** `/community`
+
 - [ ] **Discussion Forum**
+
   - [ ] Create post entity & types
   - [ ] Create Zustand posts store
   - [ ] Create mock forum data
@@ -118,6 +121,7 @@
   - [ ] Add post categories/tags
 
 - [ ] **User Interactions**
+
   - [ ] Create follow system
   - [ ] Add mention functionality (@username)
   - [ ] Implement notification system
@@ -130,8 +134,11 @@
   - [ ] Add admin moderation tools
 
 ### 4️⃣ Gamification System
+
 **หน้า Gamification:** `/gamification` หรือ `/rewards`
+
 - [ ] **Level & Experience System**
+
   - [ ] Create user level entity
   - [ ] Create Zustand level store
   - [ ] Design level progression UI
@@ -140,6 +147,7 @@
   - [ ] Add level perks/benefits
 
 - [ ] **Point & Reward System**
+
   - [ ] Create point entity & types
   - [ ] Create Zustand points store
   - [ ] Design points dashboard
@@ -155,8 +163,11 @@
   - [ ] Create achievement leaderboard
 
 ### 5️⃣ Achievements System
+
 **หน้า Achievements:** `/achievements`
+
 - [ ] **Achievement Types**
+
   - [ ] Create achievement entity & types
   - [ ] Create Zustand achievements store
   - [ ] Create mock achievements data
@@ -164,6 +175,7 @@
   - [ ] Design achievement badges
 
 - [ ] **Achievement UI**
+
   - [ ] Design achievements gallery view
   - [ ] Create achievement detail modal
   - [ ] Add progress tracking UI
@@ -177,8 +189,11 @@
   - [ ] Create rare/legendary achievements
 
 ### 6️⃣ Challenge System
+
 **หน้า Challenges:** `/challenges`
+
 - [ ] **Challenge Types**
+
   - [ ] Create challenge entity & types
   - [ ] Create Zustand challenges store
   - [ ] Create mock challenge data
@@ -186,6 +201,7 @@
   - [ ] Design challenge cards
 
 - [ ] **Challenge UI**
+
   - [ ] Design active challenges view
   - [ ] Create challenge detail page
   - [ ] Add challenge progress tracking
@@ -204,8 +220,11 @@
 ## 🌟 Additional World-Class Features
 
 ### 7️⃣ Portfolio Management
+
 **หน้า Portfolio:** `/portfolio`
+
 - [ ] **Portfolio Tracker**
+
   - [ ] Create portfolio entity & types
   - [ ] Create Zustand portfolio store
   - [ ] Design portfolio dashboard
@@ -220,8 +239,11 @@
   - [ ] Implement transaction import/export
 
 ### 8️⃣ News & Market Insights
+
 **หน้า News:** `/news`
+
 - [ ] **Gold Market News**
+
   - [ ] Create news entity & types
   - [ ] Create Zustand news store
   - [ ] Create mock news data
@@ -236,8 +258,11 @@
   - [ ] Implement market sentiment tracker
 
 ### 9️⃣ Learning Center
+
 **หน้า Learning:** `/learn`
+
 - [ ] **Educational Content**
+
   - [ ] Create course entity & types
   - [ ] Create Zustand courses store
   - [ ] Create mock course data
@@ -252,7 +277,9 @@
   - [ ] Implement glossary
 
 ### 🔟 Watchlist & Alerts
+
 **หน้า Watchlist:** `/watchlist`
+
 - [ ] **Price Watchlist**
   - [ ] Create watchlist entity
   - [ ] Create Zustand watchlist store
@@ -262,8 +289,11 @@
   - [ ] Add watchlist analytics
 
 ### 1️⃣1️⃣ Social Trading Features
+
 **หน้า Trading:** `/trading`
+
 - [ ] **Trading Ideas**
+
   - [ ] Create trading idea entity
   - [ ] Design trading idea cards
   - [ ] Add idea voting system
@@ -277,8 +307,11 @@
   - [ ] Implement follow/unfollow
 
 ### 1️⃣2️⃣ Analytics & Reports
+
 **หน้า Analytics:** `/analytics`
+
 - [ ] **Personal Analytics**
+
   - [ ] Create analytics dashboard
   - [ ] Add trading performance charts
   - [ ] Implement activity heatmap
@@ -291,7 +324,9 @@
   - [ ] Add market comparison tools
 
 ### 1️⃣3️⃣ Notification Center
+
 **หน้า Notifications:** `/notifications`
+
 - [ ] **Notification System**
   - [ ] Create notification entity
   - [ ] Create Zustand notifications store
@@ -301,7 +336,9 @@
   - [ ] Create notification badges
 
 ### 1️⃣4️⃣ Settings & Preferences
+
 **หน้า Settings:** `/settings`
+
 - [ ] **User Settings**
   - [ ] Create settings page structure
   - [ ] Add profile settings
@@ -311,7 +348,9 @@
   - [ ] Add language preferences
 
 ### 1️⃣5️⃣ Help & Support
+
 **หน้า Help:** `/help`
+
 - [ ] **Support Center**
   - [ ] Create FAQ page
   - [ ] Add help articles
@@ -324,7 +363,9 @@
 ## 🎨 UI/UX Design Requirements
 
 ### Design System
+
 - [ ] **Color Palette**
+
   - Primary: Golden (#FFD700, #FFA500, #FF8C00)
   - Secondary: Amber (#FFC107, #FFB300, #FFA000)
   - Accent: Rich Gold (#B8860B, #DAA520, #CD853F)
@@ -333,11 +374,13 @@
   - Neutral: Grays (#F5F5F5, #E0E0E0, #9E9E9E)
 
 - [ ] **Typography**
+
   - Headings: Bold, modern sans-serif
   - Body: Clean, readable font
   - Numbers: Tabular figures for prices
 
 - [ ] **Components**
+
   - Glassmorphism effects
   - Smooth animations
   - Micro-interactions
@@ -352,6 +395,7 @@
   - Touch-friendly UI
 
 ### Key UI Patterns
+
 - [ ] Sparkline charts for quick price trends
 - [ ] Color-coded price changes (green ↑, red ↓)
 - [ ] Card-based layouts
@@ -365,18 +409,20 @@
 
 ## 🗂️ Master Data Structure
 
-### Mock Data Files (JSON)
-- [ ] `public/data/gold-prices.json` - ราคาทองปัจจุบันและย้อนหลัง
-- [ ] `public/data/users.json` - ข้อมูลผู้ใช้ตัวอย่าง
-- [ ] `public/data/posts.json` - โพสต์ในชุมชน
-- [ ] `public/data/achievements.json` - รายการ achievements
-- [ ] `public/data/challenges.json` - รายการ challenges
-- [ ] `public/data/news.json` - ข่าวสารตลาดทอง
-- [ ] `public/data/courses.json` - คอร์สเรียนรู้
-- [ ] `public/data/trading-ideas.json` - ไอเดียการเทรด
-- [ ] `public/data/notifications.json` - การแจ้งเตือน
+### Mock Data Files (TypeScript)
+
+- [ ] `public/data/mock/gold-prices.ts` - ราคาทองปัจจุบันและย้อนหลัง
+- [ ] `public/data/mock/users.ts` - ข้อมูลผู้ใช้ตัวอย่าง
+- [ ] `public/data/mock/posts.ts` - โพสต์ในชุมชน
+- [ ] `public/data/mock/achievements.ts` - รายการ achievements
+- [ ] `public/data/mock/challenges.ts` - รายการ challenges
+- [ ] `public/data/mock/news.ts` - ข่าวสารตลาดทอง
+- [ ] `public/data/mock/courses.ts` - คอร์สเรียนรู้
+- [ ] `public/data/mock/trading-ideas.ts` - ไอเดียการเทรด
+- [ ] `public/data/mock/notifications.ts` - การแจ้งเตือน
 
 ### Zustand Stores
+
 - [ ] `authStore.ts` - Authentication & user session
 - [ ] `goldPriceStore.ts` - Gold prices & historical data
 - [ ] `communityStore.ts` - Posts, comments, reactions
@@ -393,6 +439,7 @@
 ## 📱 Page Structure & Routes
 
 ### Public Pages
+
 - [ ] `/` - Home/Landing page with gold prices
 - [ ] `/prices` - Detailed price charts & analysis
 - [ ] `/news` - Market news & insights
@@ -401,6 +448,7 @@
 - [ ] `/contact` - Contact page
 
 ### Protected Pages (Require Auth)
+
 - [ ] `/dashboard` - Personal dashboard
 - [ ] `/portfolio` - Portfolio management
 - [ ] `/community` - Discussion forum
@@ -416,6 +464,7 @@
 - [ ] `/help` - Help & support
 
 ### Special Pages
+
 - [ ] `/auth/login` - Login page
 - [ ] `/auth/register` - Registration page
 - [ ] `/auth/forgot-password` - Password reset
@@ -427,6 +476,7 @@
 ## 🛠️ Technical Tasks
 
 ### Zustand Integration
+
 - [ ] Setup Zustand with TypeScript
 - [ ] Configure localforage for persistence
 - [ ] Create store templates
@@ -434,6 +484,7 @@
 - [ ] Setup store testing utilities
 
 ### Mock Data Management
+
 - [ ] Create data generation scripts
 - [ ] Setup data validation schemas (Zod)
 - [ ] Implement data fetch utilities
@@ -441,6 +492,7 @@
 - [ ] Setup data synchronization
 
 ### Performance Optimization
+
 - [ ] Implement code splitting
 - [ ] Add lazy loading for routes
 - [ ] Optimize images (Next.js Image)
@@ -450,6 +502,7 @@
 - [ ] Setup service worker (optional)
 
 ### Testing
+
 - [ ] Setup Jest for unit tests
 - [ ] Add React Testing Library
 - [ ] Create component tests
@@ -458,6 +511,7 @@
 - [ ] Add accessibility tests
 
 ### Documentation
+
 - [ ] Create component storybook
 - [ ] Write API documentation
 - [ ] Add code comments
@@ -482,18 +536,21 @@
 ## 📊 Success Metrics
 
 ### User Engagement
+
 - [ ] Daily active users (DAU)
 - [ ] Session duration
 - [ ] Page views per session
 - [ ] Return user rate
 
 ### Feature Usage
+
 - [ ] Price check frequency
 - [ ] Community post engagement
 - [ ] Achievement unlock rate
 - [ ] Challenge completion rate
 
 ### Performance
+
 - [ ] Page load time < 2s
 - [ ] Time to Interactive < 3s
 - [ ] Lighthouse score > 90
@@ -503,6 +560,7 @@
 ## 📝 Notes
 
 **Important Reminders:**
+
 1. ทุก page.tsx ต้องทำตาม pattern ใน `CREATE_PAGE_PATTERN.md`
 2. ใช้ Presenter Pattern สำหรับ business logic
 3. ใช้ Zustand สำหรับ state management
@@ -512,6 +570,7 @@
 7. Clean Architecture + SOLID principles
 
 **Design Inspiration:**
+
 - TradingView (Charts & Analysis)
 - Robinhood (Modern UI/UX)
 - Duolingo (Gamification)
@@ -530,6 +589,7 @@
 6. 💻 เริ่ม implement ฟีเจอร์ทีละ feature
 
 **Priority Order:**
+
 1. Project Setup → Authentication → Gold Prices → Community
 2. Gamification → Achievements → Challenges
 3. Additional Features (Portfolio, News, Learning, etc.)
